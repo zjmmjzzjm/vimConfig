@@ -218,38 +218,42 @@ imap <Leader>date <C-R>=strftime("[%Y-%m-%d/%H:%M:%S]")<CR>
 "<F3>                该文件中查找当前单词
 nmap <F3> :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 
+"FuzzyFinder 禁用最近命令模式
+let g:fuf_modesDisable = ['mrucmd']
+
+
 " ======= 引号 && 括号自动匹配 ======= "
 
-:inoremap ( ()<ESC>i
-
-:inoremap ) <c-r>=ClosePair(')')<CR>
-
-:inoremap { {}<ESC>i
-
-:inoremap } <c-r>=ClosePair('}')<CR>
-
-:inoremap [ []<ESC>i
-
-:inoremap ] <c-r>=ClosePair(']')<CR>
-
-":inoremap < <><ESC>i
-
-":inoremap > <c-r>=ClosePair('>')<CR>
-
-:inoremap " ""<ESC>i
-
-:inoremap ' ''<ESC>i
-
-:inoremap ` ``<ESC>i
-
-function ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-       return "\<Right>"
-    else
-       return a:char
-    endif
-endf
-
+":inoremap ( ()<ESC>i
+"
+":inoremap ) <c-r>=ClosePair(')')<CR>
+"
+":inoremap { {}<ESC>i
+"
+":inoremap } <c-r>=ClosePair('}')<CR>
+"
+":inoremap [ []<ESC>i
+"
+":inoremap ] <c-r>=ClosePair(']')<CR>
+"
+"":inoremap < <><ESC>i
+"
+"":inoremap > <c-r>=ClosePair('>')<CR>
+"
+":inoremap " ""<ESC>i
+"
+":inoremap ' ''<ESC>i
+"
+":inoremap ` ``<ESC>i
+"
+"function ClosePair(char)
+"    if getline('.')[col('.') - 1] == a:char
+"       return "\<Right>"
+"    else
+"       return a:char
+"    endif
+"endf
+"
 " 编译源文件
 func! CompileCode()
         exec "w"
@@ -312,4 +316,12 @@ else
 endif
 Bundle 'AutoComplPop' 
 Bundle 'Lokaltog/vim-easymotion'
-filetype on"''"'''''')"")
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'Auto-Pairs'
+Bundle 'Yggdroot/indentLine'
+Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-powerline.git'
+filetype on
