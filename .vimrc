@@ -326,4 +326,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-powerline.git'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
+Bundle 'DrawIt'
+Bundle 'Align'
 filetype on
