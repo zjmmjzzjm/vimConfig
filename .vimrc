@@ -324,4 +324,6 @@ Bundle 'Auto-Pairs'
 Bundle 'Yggdroot/indentLine'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 filetype on
