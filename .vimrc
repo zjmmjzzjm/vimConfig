@@ -328,4 +328,5 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'DrawIt'
 Bundle 'Align'
+Bundle 'airblade/vim-gitgutter'
 filetype on
