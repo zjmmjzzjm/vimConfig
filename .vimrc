@@ -314,6 +314,7 @@ else
 		set rtp+=~/vimfiles/bundle/vundle/
 			call vundle#rc('$HOME/vimfiles/bundle/')
 endif
+Bundle 'gmarik/vundle.git'
 Bundle 'AutoComplPop' 
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
@@ -329,4 +330,5 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'DrawIt'
 Bundle 'Align'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'VisIncr'
 filetype on
