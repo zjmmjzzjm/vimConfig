@@ -331,5 +331,7 @@ Bundle 'DrawIt'
 Bundle 'Align'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'VisIncr'
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
 filetype on
 "git clone https://github.com/gmarik/vundle.git  ~/.vim/bundle/vundle
