@@ -150,7 +150,7 @@ set hlsearch                 " 开启高亮显示结果
 set nowrapscan               " 搜索到文件两端时不重新搜索
 set nocompatible             " 关闭兼容模式
 set vb t_vb=                 " 关闭提示音
-"set cursorline              " 突出显示当前行
+set cursorline              " 突出显示当前行
 set hidden                   " 允许在有未保存的修改时切换缓冲区
 set list                     " 显示Tab符，使用一高亮竖线代替
 set listchars=tab:\|\ ,
@@ -333,5 +333,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'VisIncr'
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'matchit.zip'
 filetype on
 "git clone https://github.com/gmarik/vundle.git  ~/.vim/bundle/vundle
