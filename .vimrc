@@ -308,5 +308,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'VisIncr'
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'matchit.zip'
 filetype on
 "git clone https://github.com/gmarik/vundle.git  ~/.vim/bundle/vundle
