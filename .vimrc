@@ -55,26 +55,11 @@
 " ?                          --弹出帮助菜单
 " q                          --退出该插件
 
-" --------calendar [打开日历功能] ------------------
-" :Calendar                  --打开日历
-" \caL                       --水平打开日历
-" \cal                       --垂直打开日L
-
-" --------lookupfile [查找文件] ------------------
-" :LookupFile               --从tags查找文件 
-" :LUPath                   --从globpath()指定的路径中查找文件
-" :LUBufs                   --从已加载的文件中查找文件
-" :LUWalk                   --使用glob加载文件
-" :LUArgs                   --从args中加载文件
-" 将所有以.html结尾的文档以Django Template语法进行渲染
-
 
 " ---------Doxygen   [增加注释功能]--------------"
 " :Dox                     --给函数增加说明
 " :DoxAuthor               --增加作者说明
 
-" ---------MRU [最近使用的文件功能]--------------"
-" :MRU
 
 "---------FuzzyFinder [非常优秀的file/buffer/tags/mark/jumplist/mru查找工具]
 " :FufBuffer               -- Buffer mode (|fuf-buffer-mode|)
@@ -129,8 +114,6 @@
 "<Leader>r           --Run python (g:pymode_run enabled)
 "<Leader>b           --Set, unset breakpoint (g:pymode_breakpoint enabled)
 "
-" 本配置语句必须放在所有配置的最前面
-au BufNewFile,BufRead *.html setf htmldjango
 
 colorscheme elflord          " 着色模式
 set guifont=Monaco:h10       " 字体 && 字号
@@ -150,7 +133,7 @@ set hlsearch                 " 开启高亮显示结果
 set nowrapscan               " 搜索到文件两端时不重新搜索
 set nocompatible             " 关闭兼容模式
 set vb t_vb=                 " 关闭提示音
-"set cursorline              " 突出显示当前行
+set cursorline              " 突出显示当前行
 set hidden                   " 允许在有未保存的修改时切换缓冲区
 set list                     " 显示Tab符，使用一高亮竖线代替
 set listchars=tab:\|\ ,
@@ -162,8 +145,8 @@ set novisualbell             "命令出错时，防止闪屏
 syntax enable                " 打开语法高亮
 syntax on                    " 开启文件类型侦测
 filetype indent on           " 针对不同的文件类型采用不同的缩进格式
-filetype plugin on           " 针对不同的文件类型加载对应的插件
-filetype plugin indent on    " 启用自动补全
+"filetype plugin on           " 针对不同的文件类型加载对应的插件
+"filetype plugin indent on    " 启用自动补全
 
 set writebackup              " 设置无备份文件
 set nobackup
@@ -186,9 +169,8 @@ endif
 
 
 " 设置编码
-set fenc=utf-8
 set encoding=utf-8
-set fileencodings=utf-8,korea,gbk,cp936,latin-1
+set fileencodings=utf-8,gbk,korea,cp936,latin-1
 set fileencoding=utf-8
 "以下是为了支持韩文字体显示"
 "set guifont=GulimChe
@@ -197,20 +179,14 @@ set fileencoding=utf-8
 
 
 "设置80列后显示为灰色
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
+"let &colorcolumn=join(range(81,999),",")
+"highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 "解决菜单乱码"
-source $VIMRUNTIME/delmenu.vim  
-source $VIMRUNTIME/menu.vim
+"source $VIMRUNTIME/delmenu.vim  
+"source $VIMRUNTIME/menu.vim
 "解决终端出现乱码
 language messages zh_CN.utf-8 
-
-
-
-
-
-
 
 " \date                  当前位置插入时间戳 
 imap <Leader>date <C-R>=strftime("[%Y-%m-%d/%H:%M:%S]")<CR>
@@ -305,7 +281,6 @@ endfunc
 "vmap <c-r> <ESC>:call RunCode()<CR>
 
 
-set nocompatible
 filetype off
 if has("unix")
 	set rtp+=~/.vim/bundle/vundle/
