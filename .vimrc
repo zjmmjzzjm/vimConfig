@@ -145,8 +145,8 @@ set novisualbell             "命令出错时，防止闪屏
 syntax enable                " 打开语法高亮
 syntax on                    " 开启文件类型侦测
 filetype indent on           " 针对不同的文件类型采用不同的缩进格式
-"filetype plugin on           " 针对不同的文件类型加载对应的插件
-"filetype plugin indent on    " 启用自动补全
+filetype plugin on           " 针对不同的文件类型加载对应的插件
+filetype plugin indent on    " 启用自动补全
 
 set writebackup              " 设置无备份文件
 set nobackup
@@ -289,11 +289,13 @@ else
 		set rtp+=~/vimfiles/bundle/vundle/
 			call vundle#rc('$HOME/vimfiles/bundle/')
 endif
+"GitHub上面插件写法.
 Bundle 'gmarik/vundle.git'
 Bundle 'AutoComplPop' 
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
+"官网www.vim.org插件写法
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Auto-Pairs'
@@ -309,5 +311,12 @@ Bundle 'VisIncr'
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'matchit.zip'
+"其他仓库的插件.
+"Bundle "git@gitwincent.com/commant-t.git"
 filetype on
 "git clone https://github.com/gmarik/vundle.git  ~/.vim/bundle/vundle
+"easymotion configs
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
