@@ -295,6 +295,8 @@ Bundle 'AutoComplPop'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
+Bundle 'ivanov/vim-ipython'
+Bundle 'majutsushi/tagbar'
 "官网www.vim.org插件写法
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -311,6 +313,7 @@ Bundle 'VisIncr'
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'matchit.zip'
+Bundle 'taglist.vim'
 "其他仓库的插件.
 "Bundle "git@gitwincent.com/commant-t.git"
 filetype on
