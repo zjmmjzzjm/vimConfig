@@ -7,5 +7,6 @@ my vim configuration
   * git init; 
   * git remote add *This repository*
 * After the repository be pulled, you should execute commands :
-  * git submoduel init
+  * git submodule init
+	git submodule update
   * vim +VundleInstall +qa!
