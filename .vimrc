@@ -115,7 +115,7 @@
 "<Leader>b           --Set, unset breakpoint (g:pymode_breakpoint enabled)
 "
 
-colorscheme elflord          " 着色模式
+colorscheme default" 着色模式
 set guifont=Monaco:h10       " 字体 && 字号
 set tabstop=4                " 设置tab键的宽度
 set shiftwidth=4             " 换行时行间交错使用4个空格
@@ -297,6 +297,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'ivanov/vim-ipython'
 Bundle 'majutsushi/tagbar'
+Bundle 'mattn/emmet-vim.git'
 "官网www.vim.org插件写法
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -314,6 +315,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'matchit.zip'
 Bundle 'taglist.vim'
+Bundle 'HTML.zip'
 "其他仓库的插件.
 "Bundle "git@gitwincent.com/commant-t.git"
 filetype on
