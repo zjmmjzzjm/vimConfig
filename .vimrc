@@ -314,6 +314,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'matchit.zip'
 Bundle 'taglist.vim'
+Bundle 'grep.vim'
 "其他仓库的插件.
 "Bundle "git@gitwincent.com/commant-t.git"
 filetype on
