@@ -301,6 +301,9 @@ Bundle 'myhere/vim-nodejs-complete'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/emmet-vim.git'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+
 "官网www.vim.org插件写法
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -329,10 +332,12 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
+let g:UltiSnipsExpandTrigger="<tab>"
 
 if has('gui_running')
 	set background=light
 else
 	set background=dark
+"	let g:solarized_termcolors=256
 endif
 colorscheme solarized
