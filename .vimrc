@@ -304,6 +304,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'mattn/emmet-vim.git'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
+Bundle 'oplatek/Conque-Shell'
+
 
 "官网www.vim.org插件写法
 Bundle 'L9'
