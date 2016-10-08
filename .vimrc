@@ -299,7 +299,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'myhere/vim-nodejs-complete'
 "Bundle 'ivanov/vim-ipython'
-Bundle 'altercation/vim-colors-solarized'
+"Bundle 'altercation/vim-colors-solarized'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/emmet-vim.git'
 Bundle 'SirVer/ultisnips'
@@ -325,6 +325,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'matchit.zip'
 Bundle 'taglist.vim'
 Bundle 'grep.vim'
+Bundle 'moll/vim-node'
 "Bundle 'HTML.zip'
 "其他仓库的插件.
 "Bundle "git@gitwincent.com/commant-t.git"
@@ -343,4 +344,5 @@ else
 	set background=dark
 "	let g:solarized_termcolors=256
 endif
-colorscheme solarized
+"colorscheme solarized
+colorscheme darkblue
