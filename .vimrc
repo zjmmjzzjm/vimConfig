@@ -118,8 +118,8 @@
 "colorscheme default" 着色模式
 
 set guifont=Monaco:h10       " 字体 && 字号
-"set tabstop=4                " 设置tab键的宽度
-"set shiftwidth=4             " 换行时行间交错使用4个空格
+set tabstop=4                " 设置tab键的宽度
+set shiftwidth=4             " 换行时行间交错使用4个空格
 "set autoindent               " 自动对齐
 set backspace=2              " 设置退格键可用
 "set cindent shiftwidth=4     " 自动缩进4空格
@@ -147,8 +147,8 @@ syntax enable                " 打开语法高亮
 syntax on                    " 开启文件类型侦测
 filetype indent on           " 针对不同的文件类型采用不同的缩进格式
 filetype plugin on           " 针对不同的文件类型加载对应的插件
-filetype plugin indent on    " 启用自动补全
 autocmd FileType javascript set shiftwidth=2 | set expandtab | set tabstop=2 "针对特殊文件类型，tab自动展开
+autocmd FileType markdown  filetype indent off  "针对特殊文件类型，tab自动展开
 
 set writebackup              " 设置无备份文件
 set nobackup
