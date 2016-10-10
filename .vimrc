@@ -347,3 +347,10 @@ else
 "	let g:solarized_termcolors=256
 endif
 colorscheme solarized
+"ctrlp limits
+let g:ctrlp_max_files = 0
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn|)$)|(node_modules)',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': '',
+  \ }
