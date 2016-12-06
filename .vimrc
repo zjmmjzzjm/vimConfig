@@ -149,8 +149,10 @@ filetype indent on           " 针对不同的文件类型采用不同的缩进�
 filetype plugin on           " 针对不同的文件类型加载对应的插件
 autocmd FileType javascript set shiftwidth=2 | set expandtab | set tabstop=2 "针对特殊文件类型，tab自动展开
 autocmd FileType markdown  filetype indent off  "针对特殊文件类型，tab自动展开
+autocmd FileType python set shiftwidth=4 | set expandtab | set tabstop=4 "针对特殊文件类型，tab自动展开
 
 set writebackup              " 设置无备份文件
+set nowritebackup              " 设置无备份文件
 set nobackup
 set autochdir                " 设定文件浏览器目录为当前目录
 "set nowrap                  " 设置不自动换行
@@ -293,38 +295,40 @@ else
 endif
 "GitHub上面插件写法.
 Bundle 'gmarik/vundle.git'
-Bundle 'AutoComplPop' 
+"Bundle 'AutoComplPop' 
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'myhere/vim-nodejs-complete'
+"Bundle 'myhere/vim-nodejs-complete'
 "Bundle 'ivanov/vim-ipython'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'majutsushi/tagbar'
+"Bundle 'majutsushi/tagbar'
 Bundle 'mattn/emmet-vim.git'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
-Bundle 'oplatek/Conque-Shell'
+Bundle 'kien/ctrlp.vim'
+"Bundle 'oplatek/Conque-Shell'
 
 
 "官网www.vim.org插件写法
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'Auto-Pairs'
-Bundle 'Yggdroot/indentLine'
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
+"Bundle 'Auto-Pairs'
+"Bundle 'Yggdroot/indentLine'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-powerline.git'
 "Bundle 'scrooloose/nerdcommenter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
-Bundle 'DrawIt'
-Bundle 'Align'
+"Bundle 'DrawIt'
+"Bundle 'Align'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'VisIncr'
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
+"Bundle 'VisIncr'
+"Bundle 'godlygeek/tabular'
+"Bundle 'plasticboy/vim-markdown'
 Bundle 'matchit.zip'
-Bundle 'taglist.vim'
+"Bundle 'taglist.vim'
 Bundle 'grep.vim'
+Bundle 'moll/vim-node'
 "Bundle 'HTML.zip'
 "其他仓库的插件.
 "Bundle "git@gitwincent.com/commant-t.git"
@@ -340,7 +344,20 @@ let g:UltiSnipsExpandTrigger="<tab>"
 if has('gui_running')
 	set background=light
 else
+	set t_Co=256
+	let g:solarized_termcolors=256
+	colorscheme solarized
 	set background=dark
-"	let g:solarized_termcolors=256
 endif
-colorscheme solarized
+"ctrlp limits
+let g:ctrlp_max_files = 0
+let g:ctrlp_lazy_update = 0
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:100,results:30'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn|)$)|(node_modules)|(dev)|(dist)',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': '',
+  \ }
+set nowritebackup              " 设置无备份文件
+set nobackup
+set noswapfile
