@@ -152,6 +152,7 @@ autocmd FileType javascript set shiftwidth=2 | set expandtab | set tabstop=2 "�
 autocmd FileType python set shiftwidth=4 | set expandtab | set tabstop=4 "针对特殊文件类型，tab自动展开
 
 set writebackup              " 设置无备份文件
+set nowritebackup              " 设置无备份文件
 set nobackup
 set autochdir                " 设定文件浏览器目录为当前目录
 "set nowrap                  " 设置不自动换行
@@ -298,10 +299,10 @@ Bundle 'gmarik/vundle.git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'myhere/vim-nodejs-complete'
+"Bundle 'myhere/vim-nodejs-complete'
 "Bundle 'ivanov/vim-ipython'
-"Bundle 'altercation/vim-colors-solarized'
-Bundle 'majutsushi/tagbar'
+Bundle 'altercation/vim-colors-solarized'
+"Bundle 'majutsushi/tagbar'
 Bundle 'mattn/emmet-vim.git'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
@@ -312,20 +313,20 @@ Bundle 'kien/ctrlp.vim'
 "官网www.vim.org插件写法
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
-Bundle 'Auto-Pairs'
-Bundle 'Yggdroot/indentLine'
+"Bundle 'Auto-Pairs'
+"Bundle 'Yggdroot/indentLine'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-powerline.git'
 "Bundle 'scrooloose/nerdcommenter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
-Bundle 'DrawIt'
-Bundle 'Align'
+"Bundle 'DrawIt'
+"Bundle 'Align'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'VisIncr'
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
+"Bundle 'VisIncr'
+"Bundle 'godlygeek/tabular'
+"Bundle 'plasticboy/vim-markdown'
 Bundle 'matchit.zip'
-Bundle 'taglist.vim'
+"Bundle 'taglist.vim'
 Bundle 'grep.vim'
 Bundle 'moll/vim-node'
 "Bundle 'HTML.zip'
@@ -343,15 +344,20 @@ let g:UltiSnipsExpandTrigger="<tab>"
 if has('gui_running')
 	set background=light
 else
-	set background=dark
 	set t_Co=256
-"	let g:solarized_termcolors=256
+	let g:solarized_termcolors=256
+	colorscheme solarized
+	set background=dark
 endif
-colorscheme solarized
 "ctrlp limits
 let g:ctrlp_max_files = 0
+let g:ctrlp_lazy_update = 0
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:100,results:30'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn|)$)|(node_modules)',
+  \ 'dir':  '\v[\/](\.(git|hg|svn|)$)|(node_modules)|(dev)|(dist)',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': '',
   \ }
+set nowritebackup              " 设置无备份文件
+set nobackup
+set noswapfile
