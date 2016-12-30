@@ -147,8 +147,8 @@ syntax enable                " 打开语法高亮
 syntax on                    " 开启文件类型侦测
 filetype indent on           " 针对不同的文件类型采用不同的缩进格式
 filetype plugin on           " 针对不同的文件类型加载对应的插件
-filetype plugin indent on    " 启用自动补全
 autocmd FileType javascript set shiftwidth=2 | set expandtab | set tabstop=2 "针对特殊文件类型，tab自动展开
+autocmd FileType markdown  filetype indent off  "针对特殊文件类型，tab自动展开
 autocmd FileType python set shiftwidth=4 | set expandtab | set tabstop=4 "针对特殊文件类型，tab自动展开
 
 set writebackup              " 设置无备份文件
