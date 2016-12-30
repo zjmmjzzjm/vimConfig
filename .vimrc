@@ -340,6 +340,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 map @@x !%xmllint --format --recover -<CR>
+map @@j !%python -m json.tool files.json
 let g:UltiSnipsExpandTrigger="<tab>"
 
 if has('gui_running')
