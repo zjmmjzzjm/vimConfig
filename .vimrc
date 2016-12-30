@@ -339,6 +339,7 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
+map @@x !%xmllint --format --recover -<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 
 if has('gui_running')
